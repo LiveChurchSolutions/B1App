@@ -21,10 +21,10 @@ export const TabEdit: React.FC<Props> = (props) => {
     const val = e.currentTarget.value;
     let t = { ...currentTab };
     switch (e.currentTarget.name) {
-    case "text": t.text = val; break;
-    case "type": t.linkType = val; break;
-    case "page": t.linkData = val; break;
-    case "url": t.url = val; break;
+      case "text": t.text = val; break;
+      case "type": t.linkType = val; break;
+      case "page": t.linkData = val; break;
+      case "url": t.url = val; break;
     }
     setCurrentTab(t);
   }

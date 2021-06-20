@@ -42,7 +42,7 @@ export const Services: React.FC<Props> = (props) => {
       ApiHelper.get("/servicetimes?serviceId=" + serviceId, "AttendanceApi").then(times => { CheckinHelper.serviceId = serviceId; CheckinHelper.serviceTimes = times; }),
       ApiHelper.get("/groupservicetimes", "AttendanceApi").then(groupServiceTimes => { CheckinHelper.groupServiceTimes = groupServiceTimes }),
       ApiHelper.get("/groups", "MembershipApi").then(groups => { CheckinHelper.groups = groups }),
-      ApiHelper.get("/people/household/" + PersonHelper.person.householdId, "MembershipApi").then(members => { CheckinHelper.householdMembers = members }),
+      ApiHelper.get("/people/household/" + PersonHelper.person.householdId, "MembershipApi").then(members => { CheckinHelper.householdMembers = members })
     ];
     await Promise.all(promises);
     const peopleIds: number[] = ArrayHelper.getUniqueValues(CheckinHelper.householdMembers, "id");

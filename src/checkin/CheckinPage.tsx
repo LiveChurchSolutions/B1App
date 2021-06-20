@@ -24,15 +24,15 @@ export const CheckinPage: React.FC<Props> = (props) => {
     let result = <h1 style={{ textAlign: "center" }}>Please login</h1>
     if (UserHelper.user?.displayName) {
       switch (currentStep) {
-      case "household":
-        result = <Household completeHandler={handleCheckinComplete} />
-        break;
-      case "complete":
-        result = <CheckinComplete />
-        break;
-      default:
-        result = <Services selectedHandler={handleServiceSelected} />;
-        break;
+        case "household":
+          result = <Household completeHandler={handleCheckinComplete} />
+          break;
+        case "complete":
+          result = <CheckinComplete />
+          break;
+        default:
+          result = <Services selectedHandler={handleServiceSelected} />;
+          break;
       }
     }
     return result;

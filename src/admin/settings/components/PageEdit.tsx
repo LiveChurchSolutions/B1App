@@ -25,7 +25,7 @@ export const PageEdit: React.FC<Props> = (props) => {
     const val = e.currentTarget.value;
     let p = { ...page };
     switch (e.currentTarget.name) {
-    case "name": p.name = val; break;
+      case "name": p.name = val; break;
             //case "type": t.tabType = val; break;
             //case "page": t.tabData = val; break;
             //case "url": t.url = val; break;

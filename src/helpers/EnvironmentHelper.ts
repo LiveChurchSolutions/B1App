@@ -10,15 +10,15 @@ export class EnvironmentHelper {
 
     static init = () => {
       switch (process.env.REACT_APP_STAGE) {
-      case "staging": EnvironmentHelper.initStaging(); break;
-      case "prod": EnvironmentHelper.initProd(); break;
-      default: EnvironmentHelper.initDev(); break;
+        case "staging": EnvironmentHelper.initStaging(); break;
+        case "prod": EnvironmentHelper.initProd(); break;
+        default: EnvironmentHelper.initDev(); break;
       }
       ApiHelper.apiConfigs = [
         { keyName: "AccessApi", url: EnvironmentHelper.AccessApi, jwt: "", permisssions: [] },
         { keyName: "AttendanceApi", url: EnvironmentHelper.AttendanceApi, jwt: "", permisssions: [] },
         { keyName: "MembershipApi", url: EnvironmentHelper.MembershipApi, jwt: "", permisssions: [] },
-        { keyName: "B1Api", url: EnvironmentHelper.B1Api, jwt: "", permisssions: [] },
+        { keyName: "B1Api", url: EnvironmentHelper.B1Api, jwt: "", permisssions: [] }
       ];
     }
 

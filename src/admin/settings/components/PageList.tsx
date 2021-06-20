@@ -21,7 +21,7 @@ export const PageList: React.FC<Props> = (props) => {
             <td className="text-right">
               <a href="about:blank" onClick={(e: React.MouseEvent) => { e.preventDefault(); props.editFunction(page); }}><i className="fas fa-pencil-alt"></i></a>
             </td>
-          </tr>,
+          </tr>
         );
       });
       return rows;
