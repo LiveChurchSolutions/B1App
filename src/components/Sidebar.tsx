@@ -46,7 +46,8 @@ export const Sidebar: React.FC<Props> = (props) => {
   const getUser = () => {
     let photo = <i className="fas fa-user" />;
     let name = "Anonymous";
-    if (UserHelper.user?.displayName) name = UserHelper.user.displayName;
+    const { firstName, lastName } = UserHelper.user || {};
+    if (firstName) name = `${firstName} ${lastName}`;
     if (PersonHelper.person?.name) name = PersonHelper.person.name.display;
     if (PersonHelper.person?.photo) photo = <img src={EnvironmentHelper.ContentRoot + PersonHelper.person.photo} alt="avatar" />
     return <div id="userName">{photo} {name}</div>

@@ -12,7 +12,7 @@ export const Login: React.FC = (props: any) => {
   let { from } = (useLocation().state as any) || { from: { pathname: "/" } };
 
   const successCallback = async () => {
-    PersonHelper.person = await ApiHelper.get("/people/userId/" + UserHelper.user.id, "MembershipApi");
+    PersonHelper.person = await ApiHelper.get(`/people/${UserHelper.currentChurch.personId}`, "MembershipApi");
     context.setUserName(UserHelper.currentChurch.id.toString());
   }
 

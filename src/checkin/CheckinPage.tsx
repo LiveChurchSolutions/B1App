@@ -22,7 +22,7 @@ export const CheckinPage: React.FC<Props> = (props) => {
 
   const getContent = () => {
     let result = <h1 style={{ textAlign: "center" }}>Please login</h1>
-    if (UserHelper.user?.displayName) {
+    if (UserHelper.user?.firstName) {
       switch (currentStep) {
         case "household":
           result = <Household completeHandler={handleCheckinComplete} />

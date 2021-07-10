@@ -15,7 +15,7 @@ export const DirectoryPage = () => {
 
   const getContent = () => {
     let result = <h1 style={{ textAlign: "center" }}>Please login</h1>
-    if (UserHelper.user?.displayName) {
+    if (UserHelper.user?.firstName) {
       if (personId) result = <Person personId={personId} backHandler={handleBack} selectedHandler={handlePersonSelected} />
       else result = <DirectorySearch selectedHandler={handlePersonSelected} />
     }
